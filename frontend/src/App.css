@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.todoList {
+  margin: 30px auto 0px auto;
+  width: 20%;
+  padding: 10px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

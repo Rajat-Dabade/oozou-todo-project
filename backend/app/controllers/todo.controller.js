@@ -46,3 +46,25 @@ exports.fetchTodo = (req, res) => {
         });
     });
 }
+
+exports.updateTodo = (req, res) => {
+
+    console.log("Updating subStatus");
+    Todo.update({
+        status: req.body.status
+    }, {
+        where: {
+            id: req.body.id
+        }
+    }).then(data => {
+        return res.status(200).send({
+            apiStatus: 200,
+            message: "Update status"  
+        })
+    }).catch(err => {
+        return res.status(400).send({
+            apiStatus: 400,
+            message: "Failed to update status"
+        })
+    })
+}

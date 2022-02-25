@@ -1,0 +1,14 @@
+.center {
+    width:960px;
+    margin:auto;
+    overflow:hidden;
+    display:inline-block;
+    text-align:center;
+}
+
+.todoBtn {
+    margin-top: 17px !important;
+    background-color: rgb(207, 207, 207) !important;
+    border-color: black !important;
+    color: black !important;
+}

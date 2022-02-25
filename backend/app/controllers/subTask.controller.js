@@ -27,3 +27,25 @@ exports.createSubTask = (req, res) => {
         })
     });
 }
+
+exports.updateSubTask = (req, res) => {
+    console.log(req.body.status);
+    SubTask.update({
+        status: req.body.status
+    }, {
+        where: {
+            id: req.body.id,
+            todoId: req.body.todoId
+        }
+    }).then(data => {
+        return res.status(200).send({
+            apiStatus: 200,
+            message: "Update status"  
+        })
+    }).catch(err => {
+        return res.status(400).send({
+            apiStatus: 400,
+            message: "Failed to update status"
+        })
+    })
+}
